@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "deploy":"env-cmd -f ./.env node deploy.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +16,8 @@
     "mocha": "^9.1.3",
     "solc": "^0.8.11",
     "web3": "^1.6.1"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
   }
 }
