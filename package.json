@@ -5,19 +5,31 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "deploy":"env-cmd -f ./.env node deploy.js"
+    "compile-contract": "node ethereum/compile.js",
+    "deploy-contract": "env-cmd -f ./.env node ethereum/deploy.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.0.0",
+    "fs-extra": "^10.0.0",
     "ganache-cli": "^6.12.2",
     "mocha": "^9.1.3",
     "solc": "^0.8.11",
-    "web3": "^1.6.1"
+    "web3": "^1.6.1",
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "env-cmd": "^10.1.0"
+    "env-cmd": "^10.1.0",
+    "prettier": "^2.5.1",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7"
   }
 }
